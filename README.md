@@ -9,7 +9,8 @@ Based on kickstart.nvim, but as modules.
 * treesitter
 * lsp with mason
 * autocomplete with luasnip,friendly-snippets
-* conform
+* conform (with opinionated stylua changes)
+* trouble
 * neogit
 
 ### Needs (if not already installed, like in WSL2 Ubuntu)
