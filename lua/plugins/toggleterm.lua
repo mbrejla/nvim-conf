@@ -3,11 +3,10 @@ return {
   config = function()
     local tterm = require("toggleterm")
     tterm.setup({
-      size = 20,
+      size = 15,
       open_mapping = [[<C-\>]],
       start_in_insert = true,
       direction = "horizontal"
     })
   end
 }
-
