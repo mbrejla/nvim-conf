@@ -1,20 +1,28 @@
+-- Set Tab to 2 spaces
 vim.cmd("set expandtab")
 vim.cmd("set tabstop=2")
 vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
-
+-- set leader and local leader to space
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
-
+-- show line numbers
 vim.opt.number = true
+-- show relative line numbers
 vim.opt.relativenumber = true
+-- highlight current line
 vim.opt.cursorline = true
+-- show whitespace characters
 vim.opt.list = true
 vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 
 -- Preview substitutions live, as you type!
 vim.opt.inccommand = "split"
 
+-- use system clipboard - make sure a valid clipboard provider is installed
+vim.opt.clipboard = "unnamedplus"
+
+-- laod lazy plugin manager
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
 	vim.fn.system({
