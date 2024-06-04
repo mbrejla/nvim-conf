@@ -3,7 +3,7 @@
 
 Based on kickstart.nvim, but as modules.
 
-##  Included amongst other stuff:
+## Included amongst other stuff:
 
 * telescope
 * treesitter
@@ -11,4 +11,9 @@ Based on kickstart.nvim, but as modules.
 * autocomplete with luasnip,friendly-snippets
 * conform
 * neogit
-  
+
+### Needs (if not already installed, like in WSL2 Ubuntu)
+
+* unzip *duh* 
+* ripgrep
+* win32yank (install in windows and set $PATH in wsl)
