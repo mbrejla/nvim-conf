@@ -1,3 +1,4 @@
+vim.api.nvim_exec('language en_US', true)
 -- Set Tab to 2 spaces
 vim.cmd("set expandtab")
 vim.cmd("set tabstop=2")
