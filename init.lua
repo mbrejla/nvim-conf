@@ -1,4 +1,9 @@
-vim.api.nvim_exec('language en_US', true)
+-- Check if we are running on Windows
+if vim.fn.has("win32") == 1 then
+  -- force en_US
+  vim.api.nvim_exec('language en_US', true)
+end
+
 -- Set Tab to 2 spaces
 vim.cmd("set expandtab")
 vim.cmd("set tabstop=2")
