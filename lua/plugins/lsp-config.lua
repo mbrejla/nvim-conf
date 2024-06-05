@@ -1,22 +1,23 @@
-return {{
+return { {
   "williamboman/mason.nvim",
   config = function()
     require("mason").setup({
-    PATH = "prepend", -- "skip" seems to cause the spawning error
-})
+      PATH = "prepend", -- "skip" seems to cause the spawning error
+    })
   end
 }, {
   "williamboman/mason-lspconfig.nvim",
   config = function()
     require("mason-lspconfig").setup({
-      ensure_installed = {"lua_ls", "tsserver", "html", "cssls"}
+      ensure_installed = { "lua_ls", "tsserver", "html", "cssls" },
+      auto_install = true,
     })
   end
 }, {
   "WhoIsSethDaniel/mason-tool-installer.nvim",
   config = function()
     require("mason-tool-installer").setup({
-      ensure_installed = {"stylua", "prettier", "eslint_d"}
+      ensure_installed = { "stylua", "prettier", "eslint_d" }
     })
   end
 }, {
@@ -96,13 +97,13 @@ return {{
           local highlight_augroup = vim.api.nvim_create_augroup("kickstart-lsp-highlight", {
             clear = false
           })
-          vim.api.nvim_create_autocmd({"CursorHold", "CursorHoldI"}, {
+          vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
             buffer = event.buf,
             group = highlight_augroup,
             callback = vim.lsp.buf.document_highlight
           })
 
-          vim.api.nvim_create_autocmd({"CursorMoved", "CursorMovedI"}, {
+          vim.api.nvim_create_autocmd({ "CursorMoved", "CursorMovedI" }, {
             buffer = event.buf,
             group = highlight_augroup,
             callback = vim.lsp.buf.clear_references
@@ -134,4 +135,4 @@ return {{
       end
     })
   end
-}}
+} }
